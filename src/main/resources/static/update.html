@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update对话框</title>
+    <script type="text/javascript">
+    function myConfirm() {
+    var b = window.confirm("确定要删除吗?");
+    alert(b);
+    }
+    function myPrompt() {
+    var c= window.prompt("请输入内容", "我很好");
+    alert(c);
+
+    }
+    function update() {
+    var name="张柳";
+    var age= 16;
+        var id=1;
+    window.open("add?name="+name+"&age="+age+"&id="+id);
+    }
+    </script>
+</head>
+<body>
+ID:<input type="text" id="id">
+名字:<input type="text" id="name">
+年龄:<input type="text" id="age">
+<input type="button" onclick="add()" value="增加"/>
+<input type="button" onclick="window.open('delete?name=1212')" value="删除"/>
+<input type="button" onclick=" update('update?id=1&name=张伟&age=18') " value="修改"/>
+<input type="button" onclick=" myPrompt() " value="查询"/>
+</body>
+</html>

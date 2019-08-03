@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对话框</title>
+
+    <script type="text/javascript">
+        console.log(111);
+function myConfirm() {
+  var b = window.confirm("确定要删除吗?");
+    alert(b);
+}
+        console.log(232332);
+function myPrompt() {
+   var c= window.prompt("请输入内容", "我很好");
+    alert(c);
+
+}
+function add() {
+    var nameElement= document.getElementById("name");
+    var name=nameElement.value;
+    console.log(name);
+    var ageElement= document.getElementById("age");
+    var age= ageElement.value;
+    console.log(age);
+   window.open("add?name="+name+"&age="+age);
+}
+function delete1() {
+    var idElement=document.getElementById("id");
+    var id= idElement.value;
+    console.log(id);
+    window.open("delete1?id="+id);
+}
+function update() {
+    var nameElement=document.getElementById("name");
+    var name= nameElement.value;
+    var ageElement=document.getElementById("age");
+    var age=ageElement.value;
+    var idElement=document.getElementById("id");
+    var id= idElement.value;
+    window.open("update?name="+name+"&age="+age+"&id="+id);
+}
+function search() {
+    var nameElement=document.getElementById("name");
+    var name= nameElement.value;
+    var ageElement=document.getElementById("age");
+    var age=ageElement.value;
+    window.open(" search?name="+name+"&age="+age);
+}
+    </script>
+</head>
+<body>
+ID:<input type="text" id="id">
+名字:<input type="text" id="name">
+年龄:<input type="text" id="age">
+<input type="button" onclick="add()" value="增加"/>
+<input type="button" onclick="delete1()" value="删除"/>
+<input type="button" onclick="update() " value="修改"/>
+<input type="button" onclick=" search() " value="查询"/>
+</body>
+</html>
